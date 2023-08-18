@@ -28,4 +28,8 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  & > div {
+    min-height: 100vh;
+  }
 }

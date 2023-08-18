@@ -20,6 +20,10 @@ $sh-primary:
 $sh-secondary:
   2px 0px 10px 0px rgba(6, 3, 9, 0.05),
   30px 25px 48px 8px rgba(6, 3, 9, 0.1);
+$sh-tertiary: 20px 10px 40px 5px rgba(6, 3, 9, 0.5);
+
+//gradients
+$bg-orrange: linear-gradient(132deg, #ffae47 0%, #fa3939 100%);
 
 //filters
 $blur: blur(5px);
@@ -33,7 +37,6 @@ $semibold: 600;
 $bold: 700;
 
 //breakpoints
-$xxl: 1920px;
 $xl: 1280px;
-$lg: 1024;
-$md: 768;
+$lg: 1024px;
+$md: 768px;
