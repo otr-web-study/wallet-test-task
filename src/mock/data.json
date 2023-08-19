@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1229,
+    "date": 1692459778,
+    "type": "replenishment",
+    "status": "fulfilled",
+    "amount": 400
+  },
+  {
+    "id": 1228,
+    "date": 1692459778,
+    "type": "withdrawal",
+    "status": "rejected",
+    "amount": 400
+  },
+  {
+    "id": 1227,
+    "date": 1692459778,
+    "type": "refund",
+    "status": "waiting",
+    "amount": 400
+  },
+  {
+    "id": 1226,
+    "date": 1692459778,
+    "type": "fulfillment-income",
+    "status": "fulfilled",
+    "amount": 400
+  },
+  {
+    "id": 1229,
+    "date": 1692354780,
+    "type": "replenishment",
+    "status": "fulfilled",
+    "amount": 400
+  },
+  {
+    "id": 1229,
+    "date": 1691836380,
+    "type": "replenishment",
+    "status": "fulfilled",
+    "amount": 400
+  },
+  {
+    "id": 1229,
+    "date": 1689762780,
+    "type": "replenishment",
+    "status": "fulfilled",
+    "amount": 400
+  }
+]

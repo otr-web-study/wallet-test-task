@@ -31,6 +31,10 @@ const classes = {
   transition: opacity 0.3s ease-in-out;
   background-color: transparent;
   border: none;
+  border-radius: $radii;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     opacity: 0.7;
@@ -39,11 +43,12 @@ const classes = {
   &_outlined {
     border: 1px solid rgba(250, 57, 57, 0.8);
     color: white;
-    filter: $blur;
+    backdrop-filter: $blur;
   }
 
   &_orrange {
     background-image: $bg-orrange;
+    color: white;
     box-shadow: $sh-tertiary;
   }
 

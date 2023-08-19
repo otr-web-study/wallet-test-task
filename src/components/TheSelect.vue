@@ -27,6 +27,7 @@ const handleSelect = (value: string) => {
         <span>{{ options[value] }}</span>
         <ArrowDownFilled />
       </div>
+      <span class="select__title">{{ title }}</span>
     </div>
     <Transition
       enter-active-class="select__enter-active-class"
@@ -54,7 +55,8 @@ const handleSelect = (value: string) => {
 .select {
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  min-height: 30px;
   gap: 4px;
   flex-shrink: 0;
   cursor: pointer;
@@ -62,29 +64,43 @@ const handleSelect = (value: string) => {
 
   &__container {
     position: relative;
-    z-index: 1;
+    display: flex;
+    align-items: center;
+    width: 100%;
     border-radius: $radii;
     background-color: $tertiary;
-    padding: 16px 14px 16px 20px;
+    padding-inline: 14px 20px;
     box-shadow: $sh-primary;
     border: 1px solid $border-secondary;
+    backdrop-filter: $blur;
   }
 
   &__indicator {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
+  &__title {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    font-size: 12px;
+    transform: translateY(-50%);
+  }
+
   &__selector {
     position: absolute;
     top: calc(100% + 4px);
-    z-index: 0;
+    z-index: 1;
     width: 100%;
     border-radius: $radii;
     background-color: $tertiary;
+    backdrop-filter: $blur;
     box-shadow: $sh-primary;
     padding-block: 12px;
+    border: 1px solid $border-secondary;
   }
 
   &__item {

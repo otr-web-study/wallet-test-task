@@ -31,7 +31,7 @@
   }
 
   @include media($md) {
-    padding-inline: 143px;
+    padding-inline: min(143px, 14vw);
     padding-top: 98px;
     background-position: bottom 118px right 0;
     background-size: 600px 518px;
