@@ -1,8 +1,5 @@
-export type OperationPeriod = 'all' | 'day' | 'week' | 'month';
-export type OperationType =
-  | 'all'
-  | 'replenishment'
-  | 'withdrawal'
-  | 'refund'
-  | 'fulfillment-income';
-export type OperationStatus = 'all' | 'fulfilled' | 'rejected' | 'waiting';
+import type { OperationStatus, OperationType } from '.';
+
+export type OperationPeriodFilter = 'all' | 'day' | 'week' | 'month';
+export type OperationTypeFilter = 'all' | OperationType;
+export type OperationStatusFilter = 'all' | OperationStatus;

@@ -27,7 +27,7 @@ export const useOperations = () => {
       (op) =>
         (status.value === 'all' || status.value === op.status) &&
         (type.value === 'all' || type.value === op.type) &&
-        new Date(op.date) >= comparedDate.value,
+        new Date(op.date * 1000) >= comparedDate.value,
     ),
   );
 

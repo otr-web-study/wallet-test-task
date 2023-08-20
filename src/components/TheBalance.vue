@@ -3,10 +3,9 @@ import { storeToRefs } from 'pinia';
 import MoneyIcon from '@/components/icons/MoneyIcon.vue';
 import TheButton from './ui/TheButton.vue';
 import { useBalanceStore } from '@/stores/balance-store';
+import { formatNumber } from '@/utils/format';
 
 const { balance } = storeToRefs(useBalanceStore());
-
-const formatNumber = new Intl.NumberFormat('ru', { minimumFractionDigits: 2 }).format;
 </script>
 
 <template>
@@ -34,16 +33,7 @@ const formatNumber = new Intl.NumberFormat('ru', { minimumFractionDigits: 2 }).f
   padding: 20px;
   width: 100%;
 
-  @include media($md) {
-    width: 170px;
-  }
-
-  @include media($lg) {
-    width: 234px;
-  }
-
   @include media($xl) {
-    width: 393px;
     padding: 25px;
   }
 
@@ -60,6 +50,14 @@ const formatNumber = new Intl.NumberFormat('ru', { minimumFractionDigits: 2 }).f
 
   &__caption {
     font-size: 12px;
+
+    @include media($md) {
+      max-width: 60px;
+    }
+
+    @include media($lg) {
+      max-width: 100%;
+    }
 
     @include media($xl) {
       font-size: 16px;
@@ -120,7 +118,7 @@ const formatNumber = new Intl.NumberFormat('ru', { minimumFractionDigits: 2 }).f
   }
 
   &__money-icon {
-    @include media($lg) {
+    @include media($xl) {
       width: 70px;
       height: 68px;
     }

@@ -1,4 +1,5 @@
-import type { OperationType, OperationStatus } from '.';
+export type OperationType = 'replenishment' | 'withdrawal' | 'refund' | 'fulfillment-income';
+export type OperationStatus = 'fulfilled' | 'rejected' | 'waiting';
 
 export interface Operation {
   id: number;

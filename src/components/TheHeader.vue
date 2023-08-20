@@ -31,7 +31,7 @@ const [isMdScreen] = useMatchMedia(queries);
 <style lang="scss">
 .header {
   display: grid;
-  grid-template-columns: 234px 1fr;
+  grid-template-columns: min(33%, 234px) 1fr;
   gap: 23px;
   padding-bottom: 20px;
   border-bottom: 1px solid rgba(125, 119, 129, 0.2);

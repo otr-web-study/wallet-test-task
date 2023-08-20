@@ -1,20 +1,18 @@
-import { useControlsStore } from '@/stores/controls-store';
-import type { OperationType } from '@/types';
 import { storeToRefs } from 'pinia';
+import { useControlsStore } from '@/stores/controls-store';
+import { typeRepr } from '@/utils/representation';
+import type { OperationTypeFilter } from '@/types';
 
 export const useFilterType = () => {
   const store = useControlsStore();
   const { type } = storeToRefs(store);
-  const options: Record<OperationType, string> = {
+  const options: Record<OperationTypeFilter, string> = {
     all: 'Все',
-    replenishment: 'Пополнение баланса',
-    withdrawal: 'Вывод средств',
-    refund: 'Возврат',
-    'fulfillment-income': 'Выполнение заказа/входящий платеж',
+    ...typeRepr(),
   };
 
   const handleSelectType = (value: string) => {
-    store.setType(value as OperationType);
+    store.setType(value as OperationTypeFilter);
   };
 
   return { type, options, handleSelectType };

@@ -1,19 +1,18 @@
-import { useControlsStore } from '@/stores/controls-store';
-import type { OperationStatus } from '@/types';
 import { storeToRefs } from 'pinia';
+import { useControlsStore } from '@/stores/controls-store';
+import { statusRepr } from '@/utils/representation';
+import type { OperationStatusFilter } from '@/types';
 
 export const useFilterStatus = () => {
   const store = useControlsStore();
   const { status } = storeToRefs(store);
-  const options: Record<OperationStatus, string> = {
+  const options: Record<OperationStatusFilter, string> = {
     all: 'Все',
-    fulfilled: 'Выполнен',
-    rejected: 'Отклонено',
-    waiting: 'Ожидание',
+    ...statusRepr(),
   };
 
   const handleSelectStatus = (value: string) => {
-    store.setStatus(value as OperationStatus);
+    store.setStatus(value as OperationStatusFilter);
   };
 
   return { status, options, handleSelectStatus };

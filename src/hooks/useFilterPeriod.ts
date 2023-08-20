@@ -1,11 +1,11 @@
 import { useControlsStore } from '@/stores/controls-store';
-import type { OperationPeriod } from '@/types';
+import type { OperationPeriodFilter } from '@/types';
 import { storeToRefs } from 'pinia';
 
 export const useFilterPeriod = () => {
   const store = useControlsStore();
   const { period } = storeToRefs(store);
-  const options: Record<OperationPeriod, string> = {
+  const options: Record<OperationPeriodFilter, string> = {
     all: 'За все время',
     day: 'За день',
     week: 'За последние 7 дней',
@@ -13,7 +13,7 @@ export const useFilterPeriod = () => {
   };
 
   const handleSelectPeriod = (value: string) => {
-    store.setPeriod(value as OperationPeriod);
+    store.setPeriod(value as OperationPeriodFilter);
   };
 
   return { period, options, handleSelectPeriod };

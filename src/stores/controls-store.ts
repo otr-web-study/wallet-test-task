@@ -1,21 +1,21 @@
 import { ref } from 'vue';
 import { defineStore } from 'pinia';
-import type { OperationStatus, OperationPeriod, OperationType } from '@/types';
+import type { OperationStatusFilter, OperationPeriodFilter, OperationTypeFilter } from '@/types';
 
 export const useControlsStore = defineStore('controls-store', () => {
-  const status = ref<OperationStatus>('all');
-  const period = ref<OperationPeriod>('all');
-  const type = ref<OperationType>('all');
+  const status = ref<OperationStatusFilter>('all');
+  const period = ref<OperationPeriodFilter>('all');
+  const type = ref<OperationTypeFilter>('all');
 
-  const setStatus = (value: OperationStatus) => {
+  const setStatus = (value: OperationStatusFilter) => {
     status.value = value;
   };
 
-  const setPeriod = (value: OperationPeriod) => {
+  const setPeriod = (value: OperationPeriodFilter) => {
     period.value = value;
   };
 
-  const setType = (value: OperationType) => {
+  const setType = (value: OperationTypeFilter) => {
     type.value = value;
   };
 
