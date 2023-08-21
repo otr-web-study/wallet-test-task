@@ -1,6 +1,7 @@
 <template>
   <tr class="table-head">
-    <th colspan="2">#</th>
+    <th></th>
+    <th>#</th>
     <th>Дата</th>
     <th>Описание</th>
     <th>Статус</th>
@@ -10,5 +11,9 @@
 
 <style lang="scss">
 .table-head {
+  & > th {
+    text-align: start;
+    color: $text-secondary;
+  }
 }
 </style>
